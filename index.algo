@@ -1,0 +1,28 @@
+ALGORITHM algorithm_1
+VAR
+    i:INTEGER:=0;
+    longueur : INTEGER:=0;
+    ch: STRING:="you are welcome.";
+    j:INTEGER:=0;
+    word:INTEGER:=0;
+    k:INTEGER:=0;
+    voyels:INTEGER:=0;
+BEGIN
+    WHILE (ch[i] <> '.') DO
+        longueur=longueur+1;
+        i:=i+1;
+    END_WHILE
+    write(longueur);
+    FOR j FROM 0 TO longueur STEP 1  DO
+        IF (ch[j]=' ') THEN
+           word:=word+1;
+        END_IF
+    END_FOR
+    FOR k FROM 0 TO longueur STEP 1  DO
+        IF (ch[k]='a'or ch[k]='e' or ch[k] ='u' or ch[k]='i' or ch[k]='o')THEN
+            voyels:= voyels+1;
+            k:= k+1
+        END_IF
+    END_FOR
+
+END
